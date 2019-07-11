@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: sqs-int-sns
+server:
+  port: 8090
+
+
+cloud:
+  aws:
+    region:
+      static: us-east-1
+    stack:
+      auto: false
+    credentials:
+      access-key: xxxx
+      secret-key: xxxx
+
+
