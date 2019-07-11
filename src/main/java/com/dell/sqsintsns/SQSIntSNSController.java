@@ -28,7 +28,7 @@ public class SQSIntSNSController {
 	
 	@GetMapping
 	public String test(@RequestParam("messageString")String messageString) {
-		System.out.println("Sedning Message to SNS :" + messageString);
+		System.out.println("Sedning Message to SQS :" + messageString);
 		// send message to queue
 		sqsQueueSender.sendToFifo(messageString);
 		return messageString;
@@ -36,7 +36,7 @@ public class SQSIntSNSController {
 	
 	@SqsListener("sqs-int-sns.fifo")
 	public void sendMessageToSNSFifo(String messageString) {
-		System.out.println("Recieved Message And Seding to SNS :" + messageString);
+		System.out.println("Recieved Message From SQS And Seding to SNS :" + messageString);
 		snsNotificationSender.send("same subject", messageString);
 		System.out.println("Completed sending to SNS");
 	}
