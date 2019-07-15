@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.dell</groupId>
-	<artifactId>sqs-int-sns</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>sqs-int-sns</name>
+	<artifactId>sns-int-sqs</artifactId>
+	<version>1</version>
+	<name>sns-int-sqs</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

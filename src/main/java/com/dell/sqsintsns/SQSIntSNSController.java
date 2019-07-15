@@ -42,9 +42,9 @@ public class SQSIntSNSController {
 	}
 
 	@SqsListener("sqs-int-sns")
-	public void sendMessageToSNS(String messageString) {
-		System.out.println("Recieved Message And Seding to SNS :" + messageString);
-		snsNotificationSender.send("same subject", messageString);
+	public void sendMessageToSNS(String message) {
+		System.out.println("Recieved Message From SQS And Seding to SNS :" + message);
+		snsNotificationSender.send("same subject", message);
 		System.out.println("Completed sending to SNS");
 	}
 
