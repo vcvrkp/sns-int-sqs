@@ -1,8 +1,10 @@
 /**
  * 
  */
-package com.dell.sqsintsns;
+package com.dell.sqsintsns.controller;
 
+import com.dell.sqsintsns.sns.SnsNotificationSender;
+import com.dell.sqsintsns.sqs.SqsQueueSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.aws.messaging.listener.annotation.SqsListener;
 import org.springframework.stereotype.Controller;

@@ -1,10 +1,9 @@
-package com.dell.sqsintsns;
+package com.dell.sqsintsns.sqs;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate;
 import org.springframework.cloud.aws.messaging.core.SqsMessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
@@ -22,6 +21,7 @@ public class SqsQueueSender {
 	public SqsQueueSender(AmazonSQSAsync amazonSqs) {
 		this.amazonSqs = amazonSqs;
 		this.queueMessagingTemplate = new QueueMessagingTemplate(amazonSqs);
+
 	}
 
 	public void send(String message) {
