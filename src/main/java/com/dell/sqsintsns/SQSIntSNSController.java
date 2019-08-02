@@ -5,16 +5,16 @@ package com.dell.sqsintsns;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.aws.messaging.listener.annotation.SqsListener;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author vcvr
  *
  */
-@Controller
+@RestController
 @RequestMapping("/test")
 public class SQSIntSNSController {
 
