@@ -1,4 +1,4 @@
-package com.dell.sqsintsns;
+package com.dell.sqsintsns.sns;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.aws.messaging.core.NotificationMessagingTemplate;
